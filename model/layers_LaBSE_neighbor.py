@@ -1,41 +1,26 @@
 # coding: UTF-8
-import pdb
-
+import os
+from posixpath import join
 import torch
-
 import torch.nn as nn
 from torch.nn import *
 import torch.nn.functional as F
 import numpy as np
-
 import torch.optim as optim
 from settings import *
-
 import torch.utils.data as Data
-
 from loader.DBP15KRawNeighbors import DBP15KRawNeighbors
-from loader.DBP15k import DBP15kLoader
-
-from script.preprocess.get_token import Token
-from loader.Neighbors import NeighborsLoader
-from script.preprocess.neighbor_token import NeighborToken
-
 from script.preprocess.deal_raw_dataset import MyRawdataset
 import random
 import faiss
 import pandas as pd
-
 import argparse
 import logging
-
 from datetime import datetime
-
-
 # using labse
 # from transformers import *
 import torch
 
-import collections
 
 # Labse embedding dim
 MAX_LEN = 88
@@ -340,6 +325,11 @@ class Trainer(object):
 
     def train(self, start=0):
         fix_seed(self.seed)
+        if not os.path.exists(join(PROJ_DIR, 'log')):
+            os.mkdir(join(PROJ_DIR, 'log'))
+            if not os.path.exists(join(PROJ_DIR, 'log', 'layers_LaBSE_neighbor')):
+                os.mkdir(join(PROJ_DIR, 'log', 'layers_LaBSE_neighbor'))
+
         logging.basicConfig(filename=join(PROJ_DIR, 'log', 'layers_LaBSE_neighbor/{}_{}_{}_{}_{}_{}_{}_{}_{}_{}.log'.format(
             self.args.batch_size, 
             self.args.queue_length, 

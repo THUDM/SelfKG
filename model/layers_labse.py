@@ -18,29 +18,15 @@ import torch.utils.data as Data
 
 from loader.DBP15kRawLoader import DBP15kRawLoader
 from loader.DBP15k import DBP15kLoader
-
-from script.preprocess.get_token import Token
-from loader.Neighbors import NeighborsLoader
-from script.preprocess.neighbor_token import NeighborToken
-
-from script.preprocess.deal_dataset import Mydataset
 import random
 import faiss
 import pandas as pd
-
 import argparse
 
-import torchtext.vocab as vocab
-
-from script.preprocess.deal_fasttext import FastTextEmbedding
-
-from tensorboardX import SummaryWriter
 from datetime import datetime
 
-from script.preprocess.zh_deal_fasttext import FastText_zh_Embedding
-
 # using labse
-from transformers import *
+from transformers import AutoModel, AutoTokenizer
 import torch
 
 import collections
@@ -260,9 +246,9 @@ class Trainer(object):
         self.model = None
 
         if training:
-            self.writer = SummaryWriter(
-                log_dir=join(PROJ_DIR, 'log', self.args.model, self.args.model_language, self.args.time),
-                comment=self.args.time)
+            # self.writer = SummaryWriter(
+            #     log_dir=join(PROJ_DIR, 'log', self.args.model, self.args.model_language, self.args.time),
+            #     comment=self.args.time)
 
             self.model = LaBSEEncoder(self.args, self.device).to(self.device)
 
@@ -475,8 +461,8 @@ class Trainer(object):
                                                                       tgt_pos_2=src_tensor[src_pos_id],
                                                                       src_neg=tgt_tensor[sampled_idx2],
                                                                       tgt_neg=src_tensor[sampled_idx1])
-                self.writer.add_scalar(join(self.args.model, 'contrastive_loss'), contrastive_loss.data,
-                                       self.iteration)
+                # self.writer.add_scalar(join(self.args.model, 'contrastive_loss'), contrastive_loss.data,
+                #                        self.iteration)
 
                 self.iteration += 1
 

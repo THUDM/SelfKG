@@ -1,42 +1,24 @@
 # coding: UTF-8
-import pdb
-
 import torch
-
 torch.manual_seed(37)
 torch.cuda.manual_seed(37)
-
 import torch.nn as nn
 from torch.nn import *
 import torch.nn.functional as F
 import numpy as np
-
 np.random.seed(37)
 import torch.optim as optim
 from settings import *
-
 import torch.utils.data as Data
-
 from loader.DWY100KRawNeighbor import DWY100KRawNeighbors
-
-from script.preprocess.get_token import Token
-from loader.Neighbors import NeighborsLoader
-from script.preprocess.neighbor_token import NeighborToken
-
 from script.preprocess.deal_raw_dataset import MyRawdataset
 import random
 import faiss
 import pandas as pd
-
 import argparse
-
 from datetime import datetime
-
 # using labse
-from transformers import *
-import torch
-
-import collections
+# from transformers import *
 
 # Labse embedding dim
 MAX_LEN = 88

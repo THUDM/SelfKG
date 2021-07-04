@@ -1,35 +1,24 @@
 # coding: UTF-8
-import pdb
-from time import *
 
+from time import *
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 import torch.optim as optim
 from settings import *
-
 import torch.utils.data as Data
 from loader.DWY100K import DWY100KLoader
 from script.preprocess.get_DWY_token import Token
 from loader.DWY_Neighbor import NeighborsLoader
 from script.preprocess.DWY_neighbor_token import NeighborToken
-
 from script.preprocess.deal_dataset import Mydataset
 import random
 import faiss
 import pandas as pd
-
 import argparse
-
-import torchtext.vocab as vocab
-
-from script.preprocess.deal_fasttext import FastTextEmbedding
-
-from tensorboardX import SummaryWriter
 from datetime import datetime
 
-from script.preprocess.zh_deal_fasttext import FastText_zh_Embedding
 
 
 def parse_options(parser):

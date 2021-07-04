@@ -1,0 +1,8 @@
+/__pycache__
+/data
+/loader/__pycache__
+/log
+/out
+/model/__pycache__
+/script/preprocess/__pycache__
+/.DS_Store

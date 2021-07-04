@@ -1,25 +1,13 @@
 # coding: UTF-8
-import pdb
-
 import torch
-
 import torch.nn as nn
 from torch.nn import *
 import torch.nn.functional as F
 import numpy as np
-
 import torch.optim as optim
 from settings import *
-
 import torch.utils.data as Data
-
 from loader.DBP15KRawNeighbors import DBP15KRawNeighbors
-from loader.DBP15k import DBP15kLoader
-
-from script.preprocess.get_token import Token
-from loader.Neighbors import NeighborsLoader
-from script.preprocess.neighbor_token import NeighborToken
-
 from script.preprocess.deal_raw_dataset import MyRawdataset
 import random
 import faiss
@@ -31,12 +19,7 @@ import argparse
 from datetime import datetime
 
 # using labse
-from transformers import *
-import torch
-
-import collections
-
-import pdb
+# from transformers import *
 
 # Labse embedding dim
 MAX_LEN = 88
@@ -309,7 +292,6 @@ class Trainer(object):
 
     def evaluate(self, step):
         print("Evaluate at epoch {}...".format(step))
-        # print("Evaluate at epoch {}...".format(step), file=result_file)
         ids_1, ids_2, vector_1, vector_2 = list(), list(), list(), list()
         inverse_ids_2 = dict()
         with torch.no_grad():

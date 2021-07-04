@@ -22,15 +22,8 @@ import faiss
 import pandas as pd
 
 import argparse
-
-import torchtext.vocab as vocab
-
-from script.preprocess.deal_fasttext import FastTextEmbedding
-
 from tensorboardX import SummaryWriter
 from datetime import datetime
-
-from script.preprocess.zh_deal_fasttext import FastText_zh_Embedding
 
 
 def parse_options(parser):
