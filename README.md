@@ -1,6 +1,9 @@
 # SelfKG
-Codes for ``A Self-supervised Method for Entity Alignment''
+
+Codes for ''A Self-supervised Method for Entity Alignment''
+
 ## 1. Set up
+
 **Dependencies**
 
 ```bash
@@ -14,6 +17,7 @@ transformers
 You can use `setup.sh` to set up your Anaconda environment.
 
 **Data**
+
 You can download the our data from [here](https://cloud.tsinghua.edu.cn/d/c1df705453784e568a23/), and the final structure our project should be:
 
 ```bash
