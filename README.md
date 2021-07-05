@@ -1,8 +1,14 @@
 # SelfKG
 
-Codes for ''A Self-supervised Method for Entity Alignment''
+Self-supervised Entity Alignment without using labels. For more details, please refer to:
 
-## 1. Set up
+[A Self-supervised Method for Entity Alignment](https://arxiv.org/pdf/2106.09395.pdf)
+
+[Xiao Liu\*](https://xiao9905.github.io), Haoyun Hong\*, Xinghao Wang, Zeyi Chen, Evgeny Kharlamov, [Yuxiao Dong](https://ericdongyx.github.io/), [Jie Tang](http://keg.cs.tsinghua.edu.cn/jietang/) (\*: Equal Contribution)
+
+![](img/motivation.png)
+
+## 1. Setup
 
 **Dependencies**
 
@@ -49,4 +55,8 @@ You can download the our data from [here](https://cloud.tsinghua.edu.cn/d/c1df70
 
 ## 2. Run experiments
 
-You can use `experiments.sh` to reproduce our experiments results. For more details, please refer to `experiments.sh` and our code.
+You can use 
+
+```bash experiments.sh```
+
+ to reproduce our experiments results. For more details, please refer to `experiments.sh` and our code.
