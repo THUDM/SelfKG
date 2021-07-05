@@ -1,18 +1,48 @@
 # SelfKG
 Codes for ``A Self-supervised Method for Entity Alignment''
-## 1.Get Started
+## 1. Set up
 **Dependencies**
-```
-torch 1.9.0
-bson 0.5.10
-faiss-cpu 1.7.1
-numpy 1.20.2
-pandas 1.2.5
-tqdm 4.61.1
-transformers 4.8.2
-```
-**Download Data**
-You can download the prepared data [here](https://cloud.tsinghua.edu.cn/f/9c5dfe2f4b064c998ef6/?dl=1).
 
-**Run**
-Run `python run_{}.py` to reproduce our experiments (e.g. `run_LaBSE_neighbor.py` for SelfKG with LaBSE and neighbor informations enabled on DBP15K).
+```bash
+torch # just choose the version based on your machine 
+faiss-cpu
+numpy
+pandas
+tqdm
+transformers
+```
+You can use `setup.sh` to set up your Anaconda environment.
+
+**Data**
+You can download the our data from [here](https://cloud.tsinghua.edu.cn/d/c1df705453784e568a23/), and the final structure our project should be:
+
+```bash
+├── data
+│   ├── DBP15K
+│   │   ├── fr_en
+│   │   ├── ja_en
+│   │   └── zh_en
+│   ├── DWY100K
+│   │   ├── dbp_wd
+│   │   └── dbp_yg
+│   └── LaBSE
+│       ├── bert_config.json
+│       ├── bert_model.ckpt.index
+│       ├── checkpoint
+│       ├── config.json
+│       ├── pytorch_model.bin
+│       └── vocab.txt
+├── loader
+├── model
+├── run_DWY_LaBSE_neighbor.py
+├── run_LaBSE_neighbor.py
+├── run_LaBSE_SSL_DWY.py
+├── run_LaBSE_SSL.py
+├── script
+│   └── preprocess
+└── settings.py
+```
+
+## 2. Run experiments
+
+You can use `experiments.sh` to reproduce our experiments results. For more details, please refer to `experiments.sh` and our code.
