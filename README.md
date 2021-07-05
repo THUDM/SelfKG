@@ -4,9 +4,9 @@ Self-supervised Entity Alignment without using labels. For more details, please 
 
 [A Self-supervised Method for Entity Alignment](https://arxiv.org/pdf/2106.09395.pdf)
 
-[Xiao Liu\*](https://xiao9905.github.io), Haoyun Hong\*, Xinghao Wang, Zeyi Chen, Evgeny Kharlamov, [Yuxiao Dong](https://ericdongyx.github.io/), [Jie Tang](http://keg.cs.tsinghua.edu.cn/jietang/) (\*: Equal Contribution)
+[Xiao Liu\*](https://xiao9905.github.io), Haoyun Hong\*, Xinghao Wang, Zeyi Chen, Evgeny Kharlamov, [Yuxiao Dong](https://ericdongyx.github.io/), [Jie Tang](http://keg.cs.tsinghua.edu.cn/jietang/)
 
-![](img/motivation.png)
+![](img/motivation_bg.png)
 
 ## 1. Setup
 
@@ -60,3 +60,16 @@ You can use
 ```bash experiments.sh```
 
  to reproduce our experiments results. For more details, please refer to `experiments.sh` and our code.
+
+## Citation
+
+If you find this work useful, please cite the following paper:
+
+```
+@article{liu2021self,
+  title={A Self-supervised Method for Entity Alignment},
+  author={Liu, Xiao and Hong, Haoyun and Wang, Xinghao and Chen, Zeyi and Kharlamov, Evgeny and Dong, Yuxiao and Tang, Jie},
+  journal={arXiv preprint arXiv:2106.09395},
+  year={2021}
+}
+```
