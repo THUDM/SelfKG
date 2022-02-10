@@ -1,12 +1,10 @@
 # SelfKG
 
-Self-supervised Entity Alignment without using labels. For more details, please refer to:
+SelfKG: Self-Supervised Entity Alignment in Knowledge Graphs. 
 
-[A Self-supervised Method for Entity Alignment](https://arxiv.org/pdf/2106.09395.pdf)
+<img src="img/Figure2.PNG" style="zoom:38%;" />  <img src="img/Figure3.PNG" style="zoom:39%;" />
 
-[Xiao Liu\*](https://xiao9905.github.io), Haoyun Hong\*, Xinghao Wang, Zeyi Chen, Evgeny Kharlamov, [Yuxiao Dong](https://ericdongyx.github.io/), [Jie Tang](http://keg.cs.tsinghua.edu.cn/jietang/)
-
-![](img/motivation_bg.png)
+The paper of SelfKG is accepted by The Web Conference 2022!
 
 ## 1. Setup
 
@@ -24,7 +22,7 @@ You can use `setup.sh` to set up your Anaconda environment.
 
 **Data**
 
-You can download the our data from [here](https://cloud.tsinghua.edu.cn/d/c1df705453784e568a23/), and the final structure our project should be:
+You can download the our data from [here](https://drive.google.com/drive/folders/1vuXC6A0WETEr-b2yA6Y1ZxR8Dsli4xLr?usp=sharing), and the final structure our project should be:
 
 ```bash
 ├── data
@@ -60,16 +58,3 @@ You can use
 ```bash experiments.sh```
 
  to reproduce our experiments results. For more details, please refer to `experiments.sh` and our code.
-
-## Citation
-
-If you find this work useful, please cite the following paper:
-
-```
-@article{liu2021self,
-  title={A Self-supervised Method for Entity Alignment},
-  author={Liu, Xiao and Hong, Haoyun and Wang, Xinghao and Chen, Zeyi and Kharlamov, Evgeny and Dong, Yuxiao and Tang, Jie},
-  journal={arXiv preprint arXiv:2106.09395},
-  year={2021}
-}
-```
