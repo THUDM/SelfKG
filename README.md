@@ -1,6 +1,10 @@
+<img src="img/combine.PNG" style="zoom:100%;" />
+
+
+
 # SelfKG
 
-SelfKG: Self-Supervised Entity Alignment in Knowledge Graphs.   <img src="img/combine.PNG" style="zoom:100%;" />
+SelfKG: Self-Supervised Entity Alignment in Knowledge Graphs.   
 
 The paper of SelfKG is accepted by The Web Conference 2022!
 
