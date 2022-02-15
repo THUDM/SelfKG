@@ -1,6 +1,6 @@
 torch==1.9.0
 faiss-cpu==1.7.1
-numpy==1.20.2
+numpy>=1.21
 pandas==1.2.5
 tqdm==4.61.1
 transformers==4.8.2
