@@ -91,7 +91,7 @@ to be continued ...
 
 ## Citing SelfKG
 
-If you use SelfKGin your research or wish to refer to the baseline results, please use the following BibTeX.
+If you use SelfKG in your research or wish to refer to the baseline results, please use the following BibTeX.
 
 ```
 in preparation ...
