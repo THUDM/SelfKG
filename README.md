@@ -1,4 +1,4 @@
-<img src="img/combine.PNG" style="zoom:100%;" />
+<img src="img/combine.png" style="zoom:100%;" />
 
 <p align="center"><a href="https://github.com/THUDM/SelfKG/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/THUDM/SelfKG" /></a>
 
@@ -10,7 +10,7 @@ This paper is accepted by  [The Web Conference2022](https://www2022.thewebconf.o
 
 SelfKG is the **first** **self-supervised** entity alignment method **without label supervision**, which can **match or achieve comparable results with state-of-the-art supervised baselines**. The performance of SelfKG suggests self-supervised learning offers great potential for entity alignment in Knowledge Graphs.
 
-[SelfKG: Self-Supervised Entity Alignment in Knowledge Graphs](#selfkg-self-supervised-entity-alignment-in-knowledge-graphs)
+[SelfKG: Self-Supervised Entity Alignment in Knowledge Graphs](https://arxiv.org/abs/2203.01044)
 
 - [Installation](#installation)
   - [Requirements](#requirements)
@@ -91,7 +91,7 @@ to be continued ...
 
 ## Citing SelfKG
 
-If you use SelfKGin your research or wish to refer to the baseline results, please use the following BibTeX.
+If you use SelfKG in your research or wish to refer to the baseline results, please use the following BibTeX.
 
 ```
 in preparation ...
