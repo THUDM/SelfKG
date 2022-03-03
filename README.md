@@ -1,4 +1,4 @@
-<img src="img/combine.PNG" style="zoom:100%;" />
+<img src="img/combine.png" style="zoom:100%;" />
 
 <p align="center"><a href="https://github.com/THUDM/SelfKG/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/THUDM/SelfKG" /></a>
 
