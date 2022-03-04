@@ -4,7 +4,6 @@ from collections import defaultdict
 import json
 import codecs
 import csv
-from bson import ObjectId
 from tqdm import tqdm
 import pickle
 import random
