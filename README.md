@@ -16,7 +16,7 @@ SelfKG is the **first** **self-supervised** entity alignment method **without la
   - [Requirements](#requirements)
 - [Quick Start](#quick-start)
   - [Data Preparation](#data-preparation)
-  - [Run Experiments](#run-experiments)
+  - :star:[Run Experiments](#run-experiments)
 - [❗ Common Issues](#-common-issues)
 - [Citing SelfKG](#citing-selfkg)
 
@@ -39,7 +39,7 @@ You can use [`setup.sh`](https://github.com/THUDM/SelfKG/blob/main/setup.sh) to 
 
 ### Data Preparation
 
-You can download the our data from [here](https://drive.google.com/drive/folders/1vuXC6A0WETEr-b2yA6Y1ZxR8Dsli4xLr?usp=sharing), and the final structure our project should be:
+You can download the our data from [here](https://zenodo.org/record/6326870#.YiI2K6tBxPY), and the final structure our project should be:
 
 ```bash
 ├── data
@@ -57,23 +57,33 @@ You can download the our data from [here](https://drive.google.com/drive/folders
 │       ├── config.json
 │       ├── pytorch_model.bin
 │       └── vocab.txt
+│   └── getdata.sh
 ├── loader
 ├── model
+├── run.sh # Please use this bash to run the experiments!
 ├── run_DWY_LaBSE_neighbor.py # SelfKG on DWY100k
 ├── run_LaBSE_neighbor.py # SelfKG on DBP15k
 ... # run_LaBSE_*.py # Ablation code will be available soon
 ├── script
 │   └── preprocess
-└── settings.py
+├── settings.py
+└── setup.sh # Can be used to set up your Anaconda environment
 ```
 
-### Run Experiments
+You can also use the following scripts to download the datasets directly:
 
-You can use
+```bash
+cd data
+bash getdata.sh
+```
 
-```bash experiments.sh```
+### :star:Run Experiments
 
- to reproduce our experiments results. For more details, please refer to [`experiments.sh`](https://github.com/THUDM/SelfKG/blob/main/experiments.sh) and our code.
+**Please use**
+
+**`bash run.sh`**
+
+ to reproduce our experiments results. For more details, please refer to [`run.sh`](https://github.com/THUDM/SelfKG/blob/main/run.sh) and our code.
 
 ## ❗ Common Issues
 
@@ -82,8 +92,9 @@ You can use
 "XXX file not found"
 </summary>
 <br/>
-Please make sure you've downloaded all the dataset according to README.md
+Please make sure you've downloaded all the dataset according to README.
 </details>
+
 
 to be continued ...
 
