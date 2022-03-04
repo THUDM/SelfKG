@@ -15,4 +15,4 @@ echo "install faiss-cpu=1.7.1"
 conda install -n selfkg faiss-cpu=1.7.1 -c pytorch
 
 echo "install numpy=1.21 pandas=1.2.5 tqdm=4.61.1 transformers=4.8.2"
-pip install numpy==1.21 pandas==1.2.5 tqdm==4.61.1 transformers==4.8.2
+pip install numpy==1.21 pandas==1.2.5 tqdm==4.61.1 transformers==4.8.2 torchtext==0.10.0
