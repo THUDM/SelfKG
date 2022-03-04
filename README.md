@@ -59,10 +59,10 @@ You can download the our data from [here](https://drive.google.com/drive/folders
 │       └── vocab.txt
 ├── loader
 ├── model
-├── run_DWY_LaBSE_neighbor.py
-├── run_LaBSE_neighbor.py
-├── run_LaBSE_SSL_DWY.py
-├── run_LaBSE_SSL.py
+├── run_DWY_LaBSE_neighbor.py # SelfKG on DWY100k
+├── run_LaBSE_neighbor.py # SelfKG on DBP15k
+├── run_LaBSE_SSL_DWY.py # SelfKG without neighbor aggregator on DWY100k
+├── run_LaBSE_SSL.py # SelfKG without neighbor aggregator on DBP15k
 ├── script
 │   └── preprocess
 └── settings.py
