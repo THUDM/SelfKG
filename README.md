@@ -27,8 +27,8 @@ SelfKG is the **first** **self-supervised** entity alignment method **without la
 ```txt
 torch==1.9.0
 faiss-cpu==1.7.1
-numpy>=1.21
-pandas==1.2.5
+numpy==1.19.2
+pandas==1.0.5
 tqdm==4.61.1
 transformers==4.8.2
 torchtext==0.10.0
