@@ -31,9 +31,16 @@ numpy>=1.21
 pandas==1.2.5
 tqdm==4.61.1
 transformers==4.8.2
+torchtext==0.10.0
 ```
 
-You can use [`setup.sh`](https://github.com/THUDM/SelfKG/blob/main/setup.sh) to set up your Anaconda environment.
+You can use [`setup.sh`](https://github.com/THUDM/SelfKG/blob/main/setup.sh) to set up your Anaconda environment by
+
+```bash
+bash setup.sh
+```
+
+
 
 ## Quick Start
 
