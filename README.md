@@ -74,7 +74,7 @@ You can also use the following scripts to download the datasets directly:
 
 ```bash
 cd data
-bash getdata.sh
+bash getdata.sh # The download speed is decided by your network connection. If it's pretty slow, please directly download the datasets from the website as mentioned before.
 ```
 
 ### :star:Run Experiments
