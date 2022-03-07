@@ -6,7 +6,7 @@ echo "create conda environment 'selfkg'"
 conda create -n selfkg
 
 echo "activate selfkg"
-source activate selfkg
+conda activate selfkg
 
 echo "install pytorch"
 conda install -n selfkg pytorch=1.9.0 torchvision torchaudio cudatoolkit=10.2 -c pytorch # change according to your need here
