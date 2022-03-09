@@ -285,6 +285,8 @@ class Trainer(object):
 
     def evaluate(self, step):
         logging.info("Evaluate at epoch {}...".format(step))
+        print("Evaluate at epoch {}...".format(step))
+
         ids_1, ids_2, vector_1, vector_2 = list(), list(), list(), list()
         inverse_ids_2 = dict()
         with torch.no_grad():
@@ -316,10 +318,15 @@ class Trainer(object):
             logging.info("#Entity: {}".format(len(source)))
             logging.info("Hit@1: {}".format(round(hit1, 3)))
             logging.info("Hit@10:{}".format(round(hit10, 3)))
+            print("#Entity: {}".format(len(source)))
+            print("Hit@1: {}".format(round(hit1, 3)))
+            print("Hit@10:{}".format(round(hit10, 3)))
             return round(hit1, 3), round(hit10, 3)
         logging.info('========Validation========')
+        print('========Validation========')
         hit1_valid, hit10_valid = cal_hit(vector_1, vector_2, self.val_link)
         logging.info('===========Test===========')
+        print('===========Test===========')
         hit1_test, hit10_test = cal_hit(vector_1, vector_2, self.link)
         return hit1_valid, hit10_valid, hit1_test, hit10_test
 
@@ -358,6 +365,7 @@ class Trainer(object):
         # neg_valid_num = []
 
         logging.info("*** Evaluate at the very beginning ***")
+        print("*** Evaluate at the very beginning ***")
         self.evaluate(0)
 
         best_hit1_valid_epoch = 0
@@ -439,6 +447,8 @@ class Trainer(object):
                 # if batch_id % 200 == 0 or batch_id == len(all_data_batches) - 1:
                     logging.info('epoch: {} batch: {} loss: {}'.format(epoch, batch_id,
                                                                 contrastive_loss.detach().cpu().data / self.args.batch_size))
+                    print('epoch: {} batch: {} loss: {}'.format(epoch, batch_id,
+                                                                contrastive_loss.detach().cpu().data / self.args.batch_size))
                     hit1_valid, hit10_valid, hit1_test, hit10_test = self.evaluate(str(epoch)+": batch "+str(batch_id))
                     if hit1_valid > best_hit1_valid:
                         best_hit1_valid = hit1_valid
@@ -474,5 +484,14 @@ class Trainer(object):
                     logging.info('Best Test  Hit@1  = {}({}) at epoch {}'.format(best_hit1_test, best_hit1_test_hit10, best_hit1_test_epoch))
                     logging.info('Best Test  Hit@10 = {}({}) at epoch {}'.format(best_hit10_test,best_hit10_test_hit1, best_hit10_test_epoch))
                     logging.info("====================================")
+
+                    print('Test Hit@1(10)    = {}({}) at epoch {} batch {}'.format(hit1_test, hit10_test, epoch, batch_id))
+                    print('Best Valid Hit@1  = {}({}) at epoch {}'.format(best_hit1_valid, best_hit1_valid_hit10, best_hit1_valid_epoch))
+                    print('Best Valid Hit@10 = {}({}) at epoch {}'.format(best_hit10_valid,best_hit10_valid_hit1, best_hit10_valid_epoch))
+                    print('Test @ Best Valid = {}({}) at epoch {} batch {}'.format(record_hit1, record_hit10, record_epoch, record_batch_id))
+
+                    print('Best Test  Hit@1  = {}({}) at epoch {}'.format(best_hit1_test, best_hit1_test_hit10, best_hit1_test_epoch))
+                    print('Best Test  Hit@10 = {}({}) at epoch {}'.format(best_hit10_test,best_hit10_test_hit1, best_hit10_test_epoch))
+                    print("====================================")
                 # update
                 self._model.update(self.model)
