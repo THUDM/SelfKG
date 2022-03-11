@@ -111,5 +111,23 @@ to be continued ...
 If you use SelfKG in your research or wish to refer to the baseline results, please use the following BibTeX.
 
 ```
-in preparation ...
+@article{DBLP:journals/corr/abs-2203-01044,
+  author    = {Xiao Liu and
+               Haoyun Hong and
+               Xinghao Wang and
+               Zeyi Chen and
+               Evgeny Kharlamov and
+               Yuxiao Dong and
+               Jie Tang},
+  title     = {SelfKG: Self-Supervised Entity Alignment in Knowledge Graphs},
+  journal   = {CoRR},
+  volume    = {abs/2203.01044},
+  year      = {2022},
+  url       = {https://arxiv.org/abs/2203.01044},
+  eprinttype = {arXiv},
+  eprint    = {2203.01044},
+  timestamp = {Mon, 07 Mar 2022 16:29:57 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2203-01044.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
 ```
