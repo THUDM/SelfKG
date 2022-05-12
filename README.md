@@ -11,6 +11,7 @@ This paper is accepted and **nominated as a best paper** by  [The Web Conference
 SelfKG is the **first** **self-supervised** entity alignment method **without label supervision**, which can **match or achieve comparable results with state-of-the-art supervised baselines**. The performance of SelfKG suggests self-supervised learning offers great potential for entity alignment in Knowledge Graphs.
 
 [SelfKG: Self-Supervised Entity Alignment in Knowledge Graphs](https://arxiv.org/abs/2203.01044)
+  
 https://doi.org/10.1145/3485447.3511945
 
 - [Installation](#installation)
